@@ -19,9 +19,16 @@
   display: grid;
   -ms-grid-columns: 100%;
       grid-template-columns: 100%;
-  -ms-grid-rows: 120px 100px 800px 75px;
-      grid-template-rows: 120px 100px 800px 75px;
-      grid-template-areas: "header" "titulo" "body" "footer";
+  -ms-grid-rows: 120px 100px 800px 60px 75px;
+      grid-template-rows: 120px 100px 800px 60px 75px;
+      grid-template-areas: "header" "titulo" "body" "texto" "footer";
+}
+
+#bodyLista h4 {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  grid-area: texto;
+  margin-left: 10px;
 }
 
 #bodySucursal {
@@ -29,8 +36,8 @@
   display: grid;
   -ms-grid-columns: 20% auto 15%;
       grid-template-columns: 20% auto 15%;
-  -ms-grid-rows: 120px 100px 450px 75px;
-      grid-template-rows: 120px 100px 450px 75px;
+  -ms-grid-rows: 120px 100px 400px 75px;
+      grid-template-rows: 120px 100px 400px 75px;
       grid-template-areas: "header header header" "titulo titulo titulo" "body body body" "footer footer footer ";
 }
 
@@ -39,9 +46,14 @@
   display: grid;
   -ms-grid-columns: 20% auto 15%;
       grid-template-columns: 20% auto 15%;
-  -ms-grid-rows: 120px 100px 550px 75px;
-      grid-template-rows: 120px 100px 550px 75px;
+  -ms-grid-rows: 120px 100px 580px 75px;
+      grid-template-rows: 120px 100px 580px 75px;
       grid-template-areas: "header header header" "titulo titulo titulo" "body body body" "footer footer footer ";
+}
+
+#bodyTarjeta h4 {
+  margin-left: 10px;
+  margin-top: 40px;
 }
 
 #bodyFAQ {
@@ -49,9 +61,22 @@
   display: grid;
   -ms-grid-columns: 20% auto 15%;
       grid-template-columns: 20% auto 15%;
-  -ms-grid-rows: 120px 100px 500px 75px;
-      grid-template-rows: 120px 100px 500px 75px;
+  -ms-grid-rows: 120px 100px 650px 75px;
+      grid-template-rows: 120px 100px 650px 75px;
       grid-template-areas: "header header header" "titulo titulo titulo" "body body body" "footer footer footer ";
+}
+
+#sucursal__cuerpo img {
+  height: 20px;
+  width: 20px;
+}
+
+#sucursal__cuerpo h2, #sucursal__cuerpo h4 {
+  margin-left: 10px;
+}
+
+#sucursal__cuerpo h4 {
+  margin-top: 30px;
 }
 
 .footer_bg, header {
@@ -276,17 +301,17 @@ footer {
     display: grid;
     -ms-grid-columns: 100%;
         grid-template-columns: 100%;
-    -ms-grid-rows: 175px 90px 900px 350px;
-        grid-template-rows: 175px 90px 900px 350px;
-        grid-template-areas: "header" "titulo" "body" "footer";
+    -ms-grid-rows: 175px 90px 900px 100px 350px;
+        grid-template-rows: 175px 90px 900px 100px 350px;
+        grid-template-areas: "header" "titulo" "body" "texto" "footer";
   }
   #bodyTarjeta {
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: 1fr 3fr 1fr;
         grid-template-columns: 1fr 3fr 1fr;
-    -ms-grid-rows: 175px 160px 380px 350px;
-        grid-template-rows: 175px 160px 380px 350px;
+    -ms-grid-rows: 175px 160px 530px 350px;
+        grid-template-rows: 175px 160px 530px 350px;
         grid-template-areas: "header header header" "titulo titulo titulo" "body body body" "footer footer footer ";
   }
   #bodySucursal {
@@ -294,8 +319,8 @@ footer {
     display: grid;
     -ms-grid-columns: 1fr 3fr 1fr;
         grid-template-columns: 1fr 3fr 1fr;
-    -ms-grid-rows: 175px 100px 1fr 150px;
-        grid-template-rows: 175px 100px 1fr 150px;
+    -ms-grid-rows: 175px 100px 450px 150px;
+        grid-template-rows: 175px 100px 450px 150px;
         grid-template-areas: "header header header" "titulo titulo titulo" "body body body" "footer footer footer";
   }
   #bodyFAQ {
@@ -306,6 +331,10 @@ footer {
     -ms-grid-rows: 175px 100px 750px 150px;
         grid-template-rows: 175px 100px 750px 150px;
         grid-template-areas: "header header header" "titulo titulo titulo" "body body body" "footer footer footer";
+  }
+  header h2 {
+    visibility: hidden;
+    display: none;
   }
   .logo {
     width: 150px;
@@ -322,8 +351,15 @@ footer {
   #link, #contacto {
     width: 45%;
   }
+  h4 {
+    font-size: 26px;
+  }
   h5, h6, footer {
     font-size: 25px;
+  }
+  #sucursal__cuerpo img {
+    width: 30px;
+    height: 30px;
   }
   #tarjeta__imagen img {
     width: 100%;
@@ -398,17 +434,17 @@ footer {
     display: grid;
     -ms-grid-columns: 50% 50%;
         grid-template-columns: 50% 50%;
-    -ms-grid-rows: 150px 60px 1650px 100px;
-        grid-template-rows: 150px 60px 1650px 100px;
-        grid-template-areas: "header header" "titulo titulo" "body body" "footer footer";
+    -ms-grid-rows: 150px 60px 1650px 100px 100px;
+        grid-template-rows: 150px 60px 1650px 100px 100px;
+        grid-template-areas: "header header" "titulo titulo" "body body" "texto texto" "footer footer";
   }
   #bodyTarjeta {
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: 20% 220px 10%;
         grid-template-columns: 20% 220px 10%;
-    -ms-grid-rows: 150px 120px 190px 150px;
-        grid-template-rows: 150px 120px 190px 150px;
+    -ms-grid-rows: 150px 120px 270px 150px;
+        grid-template-rows: 150px 120px 270px 150px;
         grid-template-areas: "header header header" "titulo titulo titulo" "body body body" "footer footer footer";
   }
   #bodySucursal {
@@ -468,6 +504,9 @@ footer {
   }
   #duda, #link, #contacto {
     width: 100%;
+  }
+  h4 {
+    font-size: 19px;
   }
   h5 {
     font-size: 14px;
