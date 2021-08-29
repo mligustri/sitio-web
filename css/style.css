@@ -456,8 +456,8 @@ footer {
     display: grid;
     -ms-grid-columns: 20% 220px 12%;
         grid-template-columns: 20% 220px 12%;
-    -ms-grid-rows: 150px 60px 330px 150px;
-        grid-template-rows: 150px 60px 330px 150px;
+    -ms-grid-rows: 150px 60px 335px 150px;
+        grid-template-rows: 150px 60px 335px 150px;
         grid-template-areas: "header header header" "titulo titulo titulo" "body body body" "footer footer footer";
   }
   #bodyFAQ {
